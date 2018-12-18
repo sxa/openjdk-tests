@@ -15,12 +15,15 @@ node ("master") {
 
 stage('Queue') {
     node("$LABEL") {
+        echo "SXAEC1"
         PLATFORM = 'x64_linux'
         SDK_RESOURCE = 'upstream'
         SPEC='linux_x86-64_cmprssptrs'
         checkout scm
         def jenkinsfile = load "${WORKSPACE}/openjdk-tests/buildenv/jenkins/JenkinsfileBase"
+        echo "SXAEC2"
         jenkinsfile.testBuild()
+        echo "SXAEC3"
         archive '*'
     }
 }

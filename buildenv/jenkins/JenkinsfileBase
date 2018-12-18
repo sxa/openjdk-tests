@@ -348,6 +348,8 @@ def testBuild() {
 				post("${env.BUILD_LIST}")
 			}
 		} finally {
+                        echo "SXA: Archive step in base file"
+			archive '*'
 			if (!params.KEEP_WORKSPACE) {
 				cleanWs()
 			}
