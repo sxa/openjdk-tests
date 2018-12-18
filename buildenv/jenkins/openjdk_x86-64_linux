@@ -24,6 +24,6 @@ stage('Queue') {
         echo "SXAEC2"
         jenkinsfile.testBuild()
         echo "SXAEC3"
-        archive '*'
+        archive '**'
     }
 }
