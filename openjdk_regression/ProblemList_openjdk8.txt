@@ -135,20 +135,37 @@ java/lang/management/MemoryMXBean/LowMemoryTest2.sh	157	linux-all
 
 # jdk_net
 java/net/DatagramSocket/SetDatagramSocketImplFactory/ADatagramSocket.java      https://github.com/AdoptOpenJDK/openjdk-tests/issues/649    generic-all
+java/net/InetAddress/BadDottedIPAddress.java	827	linux-all
+java/net/InetAddress/CachedUnknownHostName.java	827	linux-all
+java/net/Socks/SocksV4Test.java	827	linux-all
+java/net/InetAddress/IPv4Formats.java	827	linux-all
+java/net/SocketPermission/Wildcard.java	827	linux-all
+java/net/MulticastSocket/SetGetNetworkInterfaceTest.java	827	linux-all
+java/net/MulticastSocket/SetOutgoingIf.java	827	linux-all
+java/net/Inet6Address/B6206527.java	827	linux-all
+java/net/ipv6tests/B6521014.java	827	linux-all
+java/net/ipv6tests/UdpTest.java	827	linux-all
 ############################################################################
 
 # jdk_io
 java/nio/Buffer/Basic.java	118 linux-all
+
 ############################################################################
 
 
 # jdk_nio
 java/nio/channels/SocketChannel/Connect.java	156	macosx-all
+java/nio/channels/ServerSocketChannel/Basic.java	821	windows-all
+java/nio/channels/ServerSocketChannel/AdaptServerSocket.java	821	windows-all
+java/nio/channels/SocketChannel/ExceptionTranslation.java	827	linux-all
+java/nio/channels/DatagramChannel/SendToUnresolved.java	827	linux-all
+
 ############################################################################
 
 # jdk_rmi
 java/rmi/Naming/legalRegistryNames/LegalRegistryNames.java 61	linux-all
 java/rmi/activation/rmidViaInheritedChannel/InheritedChannelNotServerSocket.java 154 macosx-all
+java/rmi/activation/Activatable/extLoadedImpl/ext.sh	819 macosx-all
 
 ############################################################################
 
@@ -161,6 +178,7 @@ sun/security/pkcs11/ec/TestECDSA.java	70	linux-all
 sun/security/pkcs11/ec/TestECGenSpec.java	70	linux-all
 sun/security/pkcs11/rsa/TestCACerts.java	68	linux-all
 sun/security/rsa/TestCACerts.java	68	generic-all
+sun/security/pkcs11/KeyStore/SecretKeysBasic.sh	JDK-8189603	linux-all macosx-all windows-all
 
 ############################################################################
 
@@ -197,6 +215,7 @@ com/sun/jdi/RedefineCrossEvent.java	227	macosx-all
 
 # jdk_util
 java/util/ResourceBundle/Control/Bug6530694.java	137	macosx-all
+
 ############################################################################
 
 # svc_tools

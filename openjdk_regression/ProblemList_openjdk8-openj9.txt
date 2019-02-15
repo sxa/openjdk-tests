@@ -60,8 +60,8 @@ java/lang/ref/OOMEInReferenceHandler.java		https://github.com/eclipse/openj9/iss
 java/lang/reflect/DefaultMethodMembers/FilterNotMostSpecific.java		https://github.com/eclipse/openj9/issues/1128	generic-all
 java/lang/reflect/Generics/TestGenericReturnTypeToString.java		https://github.com/eclipse/openj9/issues/1128	generic-all
 sun/misc/Version/Version.java		https://github.com/eclipse/openj9/issues/1128	generic-all
-vm/verifier/VerifyProtectedConstructor.java 		https://github.com/eclipse/openj9/issues/1128	generic-all
-java/lang/invoke/RevealDirectTest.java
+vm/verifier/VerifyProtectedConstructor.java	https://github.com/eclipse/openj9/issues/1128	generic-all
+java/lang/invoke/RevealDirectTest.java	https://github.com/eclipse/openj9/issues/1128	generic-all
 ############################################################################
 
 # jdk_management
@@ -137,15 +137,24 @@ java/net/SocketPermission/Wildcard.java		https://github.com/eclipse/openj9/issue
 java/net/Socks/SocksV4Test.java		https://github.com/eclipse/openj9/issues/1129 generic-all
 java/net/URLPermission/URLTest.java		https://github.com/eclipse/openj9/issues/1129 generic-all
 java/net/DatagramSocket/SetDatagramSocketImplFactory/ADatagramSocket.java      https://github.com/AdoptOpenJDK/openjdk-tests/issues/649    generic-all
-java/net/MulticastSocket/Promiscuous.java.Promiscuous               https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/143    generic-all
-java/net/MulticastSocket/SetLoopbackMode.java.SetLoopbackMode       https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/143    generic-all
-java/net/MulticastSocket/Test.java.Test                             https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/143    generic-all
-java/nio/channels/DatagramChannel/MulticastSendReceiveTests.java    https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/143    generic-all
-java/nio/channels/DatagramChannel/Promiscuous.java                  https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/143    generic-all
+java/net/MulticastSocket/Promiscuous.java               https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/699    linux-s390x
+java/net/MulticastSocket/SetLoopbackMode.java     https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/699    linux-s390x
+java/net/MulticastSocket/Test.java                             https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/699    linux-s390x
+java/nio/channels/DatagramChannel/MulticastSendReceiveTests.java    https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/699    linux-s390x
+java/nio/channels/DatagramChannel/Promiscuous.java                  https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/699    linux-s390x
+java/net/MulticastSocket/SetGetNetworkInterfaceTest.java	827	linux-all
+java/net/MulticastSocket/SetOutgoingIf.java	827	linux-all
+java/net/Inet6Address/B6206527.java	827	linux-all
+java/net/ipv6tests/B6521014.java	827	linux-all
+java/net/ipv6tests/UdpTest.java	827	linux-all
+sun/net/www/http/ChunkedOutputStream/checkError.java	https://bugs.openjdk.java.net/browse/JDK-8041924 windows-all
 ############################################################################
 
 # jdk_io
 java/io/Serializable/clearHandleTable/ClearHandleTable.java		https://github.com/eclipse/openj9/issues/1127 generic-all
+java/io/File/DeleteOnExitNPE.java	830	linux-ppc64le,windows-all
+java/io/Serializable/serialver/classpath/run.sh	830	macosx-all
+java/io/Serializable/serialver/nested/run.sh	830	macosx-all
 ############################################################################
 
 # jdk_jdi
@@ -170,6 +179,11 @@ java/nio/charset/spi/basic.sh	https://github.com/eclipse/openj9/issues/1130	gene
 sun/nio/ch/TestMaxCachedBufferSize.java		https://github.com/eclipse/openj9/issues/1130	generic-all
 sun/nio/cs/TestCompoundTest.java	https://github.com/eclipse/openj9/issues/1130	generic-all
 sun/nio/cs/Test4200310.sh      https://github.com/ibmruntimes/openj9-openjdk-jdk8/issues/142       generic-all
+java/nio/channels/ServerSocketChannel/Basic.java	821	windows-all
+java/nio/channels/ServerSocketChannel/AdaptServerSocket.java	821	windows-all
+sun/nio/cs/TestStringCoding.java	https://github.com/eclipse/openj9/issues/4644	generic-all
+sun/nio/cs/TestStringCodingUTF8.java	https://github.com/eclipse/openj9/issues/4684	generic-all
+java/nio/channels/AsyncCloseAndInterrupt.java	https://github.com/eclipse/openj9/issues/4732	windows-all
 ############################################################################
 
 # jdk_rmi
@@ -191,7 +205,11 @@ java/rmi/activation/Activatable/restartLatecomer/RestartLatecomer.java	https://g
 java/rmi/activation/Activatable/restartService/RestartService.java	https://github.com/eclipse/openj9/issues/1144	generic-all
 java/rmi/activation/ActivateFailedException/activateFails/ActivateFails.java	https://github.com/eclipse/openj9/issues/1144	generic-all
 java/rmi/activation/ActivationSystem/modifyDescriptor/ModifyDescriptor.java		https://github.com/eclipse/openj9/issues/1144	generic-all
-
+sun/rmi/runtime/Log/6409194/NoConsoleOutput.java	830	linux-ppc64le,windows-all
+java/rmi/server/RemoteServer/AddrInUse.java	821	windows-all,linux-all,macosx-all
+java/rmi/activation/Activatable/checkAnnotations/CheckAnnotations.java	830	macosx-all
+java/rmi/activation/Activatable/nestedActivate/NestedActivate.java	830	macosx-all
+java/rmi/server/RMISocketFactory/useSocketFactory/activatable/UseCustomSocketFactory.java	https://github.com/eclipse/openj9/issues/4685	linux-ppc64le
 ############################################################################
 
 # jdk_security
@@ -208,6 +226,7 @@ javax/crypto/CryptoPermission/CryptoPolicyFallback.java	125	generic-all
 javax/crypto/CryptoPermission/TestUnlimited.java	125	generic-all
 sun/security/rsa/TestCACerts.java	125	generic-all
 sun/security/ssl/SSLSocketImpl/SSLSocketCloseHang.java	125	generic-all
+sun/security/pkcs11/KeyStore/SecretKeysBasic.sh	JDK-8189603	linux-all macosx-all windows-all
 
 ############################################################################
 
@@ -252,7 +271,19 @@ java/util/stream/test/org/openjdk/tests/java/util/stream/ToArrayOpTest.java		htt
 java/util/logging/FileHandlerMaxLocksTest.java		https://github.com/eclipse/openj9/issues/1131	generic-all
 java/util/zip/InflateIn_DeflateOut.java		https://github.com/eclipse/openj9/issues/1131	generic-all
 sun/util/calendar/zi/TestZoneInfo310.java		https://github.com/eclipse/openj9/issues/1131	generic-all
-
+java/util/SplittableRandom/SplittableRandomTest.java	830	linux-ppc64le
+java/util/logging/TestLoggingWithMainAppContext.java	830	macosx-all
+java/util/logging/TestMainAppContext.java	830	macosx-all
+java/util/zip/ZipFile/DeleteTempJar.java	821	windows-all
+java/util/Timer/NameConstructors.java	821	windows-all
+java/util/concurrent/ThreadPoolExecutor/CoreThreadTimeOut.java	821	windows-all
+sun/util/logging/PlatformLoggerTest.java	830	windows-all,linux-all,macosx-all
+java/util/Arrays/TimSortStackSize2.java	830	linux-all,macosx-all
+java/util/stream/SliceOpTest.java	830	linux-all
+java/util/logging/CheckZombieLockTest.java	830	linux-all
+java/util/concurrent/ThreadLocalRandom/ThreadLocalRandomTest.java	830	linux-all
+java/util/Arrays/ParallelPrefix.java	830	linux-all
+java/util/stream/test/org/openjdk/tests/java/util/SplittableRandomTest.java	https://github.com/eclipse/openj9/issues/4613	generic-all
 ############################################################################
 
 # svc_tools

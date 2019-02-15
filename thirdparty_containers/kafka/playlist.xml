@@ -15,7 +15,7 @@
 <playlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../TestConfig/playlist.xsd">
 	<test>
 		<testCaseName>kafka_test</testCaseName>
-	<command>docker run --rm adoptopenjdk-kafka-test:latest ; \
+	<command>docker run --rm $(EXTRA_DOCKER_ARGS) adoptopenjdk-kafka-test:latest ; \
 		$(TEST_STATUS)</command>
 		<levels>
 			<level>sanity</level>
@@ -23,5 +23,6 @@
 		<groups>
 			<group>external</group>
 		</groups>
+		<disabled>https://github.com/AdoptOpenJDK/openjdk-tests/issues/855</disabled>
 	</test>
 </playlist>
