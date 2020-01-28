@@ -100,8 +100,6 @@ def setupEnv() {
 	}
 	if ( env.SPEC.contains('sparcv')) {
 		sh 'env'
-	} else {
-		sh 'printenv'
 	}
 }
 
