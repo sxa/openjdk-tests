@@ -78,9 +78,9 @@ JTREG_IGNORE_OPTION = -ignore:quiet
 JTREG_BASIC_OPTIONS += $(JTREG_IGNORE_OPTION)
 # Multiple by 8 the timeout numbers, except on zOS use 2
 ifneq ($(OS),OS/390)
-	JTREG_TIMEOUT_OPTION =  -timeoutFactor:8
+	JTREG_TIMEOUT_OPTION =  -timeoutFactor:200
 else
-	JTREG_TIMEOUT_OPTION =  -timeoutFactor:50
+	JTREG_TIMEOUT_OPTION =  -timeoutFactor:2
 endif
 JTREG_BASIC_OPTIONS += $(JTREG_TIMEOUT_OPTION)
 # Create junit xml
