@@ -46,9 +46,9 @@ endif
 MEM := $(shell expr $(MEMORY_SIZE) / 2048)
 CORE := $(shell expr $(NPROCS) / 2)
 CONC := $(CORE)
-ifeq ($(shell expr $(CORE) \> $(MEM)), 1)
-	CONC := $(MEM)
-endif
+#ifeq ($(shell expr $(CORE) \> $(MEM)), 1)
+#	CONC := $(MEM)
+#endif
 # Can't determine cores on zOS, use a reasonable default
 ifeq ($(OS),OS/390)
 	CONC := 4
