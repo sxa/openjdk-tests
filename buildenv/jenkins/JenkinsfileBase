@@ -582,7 +582,7 @@ def runTest( ) {
 				}
 				else if (env.SPEC.startsWith('linux')) {
 					// Add an additional 10 second timeout due to issue: https://github.com/AdoptOpenJDK/openjdk-build/issues/2368#issuecomment-756683888
-					wrap([$class: 'Xvfb', autoDisplayName: true, timeout:10]) {
+					wrap([$class: 'Xvfb', autoDisplayName: true, timeout:100]) {
 						def DISPLAY = sh (
 							script: 'ps -f  | grep \'[X]vfb\' | awk \'{print \$9}\'',
 							returnStdout: true
